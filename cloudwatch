@@ -1,0 +1,9 @@
+aws cloudwatch get-metric-statistics \
+--namespace AWS/EC2 \
+--metric-name CPUUtilization \
+--dimensions Name=InstanceId,Value=i-xxxxxxxxxxxxxxxxx \
+--statistics Average \
+--start-time 2025-04-01T00:00:00 \
+--end-time 2025-04-30T23:59:00 \
+--period 3600 \
+--region us-east-1
